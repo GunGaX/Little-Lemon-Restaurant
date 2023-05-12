@@ -11,6 +11,8 @@
 		B681CFC32A0E594500276C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B681CFC22A0E594500276C52 /* Assets.xcassets */; };
 		B681CFC62A0E594500276C52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B681CFC52A0E594500276C52 /* Preview Assets.xcassets */; };
 		B681CFCD2A0E599900276C52 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B681CFCC2A0E599900276C52 /* Onboarding.swift */; };
+		B681CFCF2A0E662700276C52 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B681CFCE2A0E662700276C52 /* Menu.swift */; };
+		B681CFD12A0E67D000276C52 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B681CFD02A0E67D000276C52 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		B681CFC22A0E594500276C52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B681CFC52A0E594500276C52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B681CFCC2A0E599900276C52 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		B681CFCE2A0E662700276C52 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		B681CFD02A0E67D000276C52 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				B681CFBE2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift */,
 				B681CFCC2A0E599900276C52 /* Onboarding.swift */,
+				B681CFCE2A0E662700276C52 /* Menu.swift */,
+				B681CFD02A0E67D000276C52 /* Home.swift */,
 				B681CFC22A0E594500276C52 /* Assets.xcassets */,
 				B681CFC42A0E594500276C52 /* Preview Content */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B681CFCF2A0E662700276C52 /* Menu.swift in Sources */,
 				B681CFCD2A0E599900276C52 /* Onboarding.swift in Sources */,
+				B681CFD12A0E67D000276C52 /* Home.swift in Sources */,
 				B681CFBF2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
