@@ -13,6 +13,7 @@
 		B681CFCD2A0E599900276C52 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B681CFCC2A0E599900276C52 /* Onboarding.swift */; };
 		B681CFCF2A0E662700276C52 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B681CFCE2A0E662700276C52 /* Menu.swift */; };
 		B681CFD12A0E67D000276C52 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B681CFD02A0E67D000276C52 /* Home.swift */; };
+		B681CFD32A0E7FF700276C52 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B681CFD22A0E7FF600276C52 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B681CFCC2A0E599900276C52 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		B681CFCE2A0E662700276C52 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		B681CFD02A0E67D000276C52 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		B681CFD22A0E7FF600276C52 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				B681CFBE2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift */,
-				B681CFCC2A0E599900276C52 /* Onboarding.swift */,
-				B681CFCE2A0E662700276C52 /* Menu.swift */,
-				B681CFD02A0E67D000276C52 /* Home.swift */,
+				B681CFD42A0E925D00276C52 /* Views */,
 				B681CFC22A0E594500276C52 /* Assets.xcassets */,
 				B681CFC42A0E594500276C52 /* Preview Content */,
 			);
@@ -71,6 +71,17 @@
 				B681CFC52A0E594500276C52 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B681CFD42A0E925D00276C52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B681CFCC2A0E599900276C52 /* Onboarding.swift */,
+				B681CFCE2A0E662700276C52 /* Menu.swift */,
+				B681CFD22A0E7FF600276C52 /* UserProfile.swift */,
+				B681CFD02A0E67D000276C52 /* Home.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 			files = (
 				B681CFCF2A0E662700276C52 /* Menu.swift in Sources */,
 				B681CFCD2A0E599900276C52 /* Onboarding.swift in Sources */,
+				B681CFD32A0E7FF700276C52 /* UserProfile.swift in Sources */,
 				B681CFD12A0E67D000276C52 /* Home.swift in Sources */,
 				B681CFBF2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift in Sources */,
 			);

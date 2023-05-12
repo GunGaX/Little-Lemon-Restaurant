@@ -20,7 +20,8 @@ struct Menu: View {
                     
                     Text("Lviv")
                         .bold()
-                        .padding(20)
+                        .padding(.vertical, 10.0)
+                        .padding(.trailing, 30.0)
                     
                 }
                 

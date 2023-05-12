@@ -11,6 +11,8 @@ let kFirstName = "first name key"
 let kLastname = "second name key"
 let kEmail = "email key"
 
+let kIsloggedIn = "is logged in key"
+
 struct Onboarding: View {
     
     @State var isLoggedIn = false
@@ -47,6 +49,8 @@ struct Onboarding: View {
                         UserDefaults.standard.set(lastName, forKey: kLastname)
                         UserDefaults.standard.set(email, forKey: kEmail)
                         
+                        UserDefaults.standard.set(true, forKey: kIsloggedIn)
+                        
                         isLoggedIn = true
                     }
                 }) {
@@ -57,7 +61,6 @@ struct Onboarding: View {
                         .contentShape(Rectangle())
                         .frame(maxWidth: .infinity)
                 }
-                .frame(maxWidth: .infinity)
                 .frame(height: 50)
                 .background(Color.blue)
                 .cornerRadius(16)
@@ -66,6 +69,11 @@ struct Onboarding: View {
                 
             }
             .padding()
+            .onAppear() {
+                if UserDefaults.standard.bool(forKey: kIsloggedIn) {
+                    isLoggedIn = true
+                }
+            }
         }
     }
 }
