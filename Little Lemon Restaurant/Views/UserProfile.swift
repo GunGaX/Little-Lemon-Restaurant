@@ -66,6 +66,7 @@ struct UserProfile: View {
                     Text(email ?? "No info")
                         .font(.title2)
                         .bold()
+                        .lineLimit(1)
                     
                     Spacer()
                 }

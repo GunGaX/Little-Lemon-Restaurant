@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Menu: View {
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    
     var body: some View {
         VStack {
             Group {
@@ -32,11 +35,17 @@ struct Menu: View {
                 
             }
         }
+        .onAppear() {
+            // Kick-off the data from url            
+        }
     }
 }
 
-struct Menu_Previews: PreviewProvider {
-    static var previews: some View {
-        Menu()
-    }
-}
+//struct Menu_Previews: PreviewProvider {
+//
+//    var menuModel: MenuList
+//
+//    static var previews: some View {
+//        Menu(menuModel: menuModel)
+//    }
+//}

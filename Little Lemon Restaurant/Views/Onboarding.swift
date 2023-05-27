@@ -35,6 +35,7 @@ struct Onboarding: View {
                     TextField("First Name", text: $firstName)
                     TextField("Last Name", text: $lastName)
                     TextField("Email", text: $email)
+                        .textCase(.none)
                 }
                 .padding(.horizontal)
                 .frame(height: 50)
@@ -55,12 +56,14 @@ struct Onboarding: View {
                     }
                 }) {
                     Text("Register")
+//                        .font(.displayFont())
                         .foregroundColor(Color.white)
                         .font(.title3)
                         .bold()
                         .contentShape(Rectangle())
                         .frame(maxWidth: .infinity)
                 }
+//                .buttonStyle(ButtonStylePrimaryColor1())
                 .frame(height: 50)
                 .background(Color.blue)
                 .cornerRadius(16)

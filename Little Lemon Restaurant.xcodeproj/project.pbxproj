@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60B45D52A17E91700FC0BFF /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B45D42A17E91700FC0BFF /* MenuList.swift */; };
+		B60B45D82A17E96800FC0BFF /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B45D72A17E96800FC0BFF /* MenuItem.swift */; };
+		B60B45DB2A1A1CAC00FC0BFF /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B60B45D92A1A1CAC00FC0BFF /* ExampleDatabase.xcdatamodeld */; };
+		B60B45DD2A1A1D0600FC0BFF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B45DC2A1A1D0600FC0BFF /* Persistence.swift */; };
+		B60B45DF2A1A1D3800FC0BFF /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B45DE2A1A1D3800FC0BFF /* FetchedObjects.swift */; };
+		B60B45E22A1CE9C300FC0BFF /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B45E12A1CE9C300FC0BFF /* Styles.swift */; };
 		B681CFBF2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B681CFBE2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift */; };
 		B681CFC32A0E594500276C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B681CFC22A0E594500276C52 /* Assets.xcassets */; };
 		B681CFC62A0E594500276C52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B681CFC52A0E594500276C52 /* Preview Assets.xcassets */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B60B45D42A17E91700FC0BFF /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		B60B45D72A17E96800FC0BFF /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		B60B45DA2A1A1CAC00FC0BFF /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
+		B60B45DC2A1A1D0600FC0BFF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		B60B45DE2A1A1D3800FC0BFF /* FetchedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
+		B60B45E12A1CE9C300FC0BFF /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		B681CFBB2A0E594300276C52 /* Little Lemon Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemon Restaurant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B681CFBE2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_Lemon_RestaurantApp.swift; sourceTree = "<group>"; };
 		B681CFC22A0E594500276C52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +50,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B60B45D62A17E91E00FC0BFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B60B45D42A17E91700FC0BFF /* MenuList.swift */,
+				B60B45D72A17E96800FC0BFF /* MenuItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B60B45E02A1A1D8B00FC0BFF /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				B60B45DC2A1A1D0600FC0BFF /* Persistence.swift */,
+				B60B45DE2A1A1D3800FC0BFF /* FetchedObjects.swift */,
+				B60B45D92A1A1CAC00FC0BFF /* ExampleDatabase.xcdatamodeld */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 		B681CFB22A0E594300276C52 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				B681CFBE2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift */,
+				B6D951292A2270EC00EF6B4C /* Styles */,
+				B60B45D62A17E91E00FC0BFF /* Models */,
 				B681CFD42A0E925D00276C52 /* Views */,
+				B60B45E02A1A1D8B00FC0BFF /* DB */,
 				B681CFC22A0E594500276C52 /* Assets.xcassets */,
 				B681CFC42A0E594500276C52 /* Preview Content */,
 			);
@@ -82,6 +116,14 @@
 				B681CFD02A0E67D000276C52 /* Home.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B6D951292A2270EC00EF6B4C /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				B60B45E12A1CE9C300FC0BFF /* Styles.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,10 +196,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60B45E22A1CE9C300FC0BFF /* Styles.swift in Sources */,
+				B60B45DD2A1A1D0600FC0BFF /* Persistence.swift in Sources */,
+				B60B45D82A17E96800FC0BFF /* MenuItem.swift in Sources */,
 				B681CFCF2A0E662700276C52 /* Menu.swift in Sources */,
 				B681CFCD2A0E599900276C52 /* Onboarding.swift in Sources */,
 				B681CFD32A0E7FF700276C52 /* UserProfile.swift in Sources */,
 				B681CFD12A0E67D000276C52 /* Home.swift in Sources */,
+				B60B45DB2A1A1CAC00FC0BFF /* ExampleDatabase.xcdatamodeld in Sources */,
+				B60B45D52A17E91700FC0BFF /* MenuList.swift in Sources */,
+				B60B45DF2A1A1D3800FC0BFF /* FetchedObjects.swift in Sources */,
 				B681CFBF2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +407,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B60B45D92A1A1CAC00FC0BFF /* ExampleDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B60B45DA2A1A1CAC00FC0BFF /* ExampleDatabase.xcdatamodel */,
+			);
+			currentVersion = B60B45DA2A1A1CAC00FC0BFF /* ExampleDatabase.xcdatamodel */;
+			path = ExampleDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B681CFB32A0E594300276C52 /* Project object */;
 }
