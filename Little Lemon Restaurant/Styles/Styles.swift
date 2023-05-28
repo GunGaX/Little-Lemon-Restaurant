@@ -95,19 +95,19 @@ extension Text {
 
 extension Font {
     static func displayFont() -> Font {
-        return Font.custom("Markazi Text", size: 42).weight(.medium)
+        return Font.custom("Markazi Text", size: 52).weight(.bold)
     }
     
     static func subTitleFont() -> Font {
-        return Font.custom("Markazi Text", size: 32)
+        return Font.custom("Markazi Text", size: 28).weight(.medium)
     }
     
     static func leadText() -> Font {
-        return Font.custom("Karla", size: 16).weight(.medium)
+        return Font.custom("Karla", size: 20).weight(.semibold)
     }
     
     static func regularText() -> Font {
-        return Font.custom("Markazi Text", size: 18)
+        return Font.custom("Markazi Text", size: 22)
     }
     
     static func sectionTitle() -> Font {

@@ -23,7 +23,12 @@ struct Onboarding: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
+            VStack() {
+                
+                Image("LLLogo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200)
                 
                 NavigationLink(destination: Home(), isActive: $isLoggedIn) {
                     EmptyView()
@@ -32,15 +37,30 @@ struct Onboarding: View {
                 Spacer()
                 
                 Group {
+                    Text("Login")
+                        .font(.displayFont())
+                       
+                        
+                    Text("Please sign in to continue")
+                        .font(.subTitleFont())
+                        .foregroundColor(.gray)
+                        .padding(.bottom, 20)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+                Group {
                     TextField("First Name", text: $firstName)
                     TextField("Last Name", text: $lastName)
                     TextField("Email", text: $email)
                         .textCase(.none)
+                        .keyboardType(.emailAddress)
                 }
+                .font(.regularText())
                 .padding(.horizontal)
                 .frame(height: 50)
                 .background(Color.gray.opacity(0.1))
-                .cornerRadius(16)
+                .cornerRadius(8)
+                .padding(.bottom, 6)
                 
                 Spacer()
                 
@@ -56,19 +76,9 @@ struct Onboarding: View {
                     }
                 }) {
                     Text("Register")
-//                        .font(.displayFont())
-                        .foregroundColor(Color.white)
-                        .font(.title3)
-                        .bold()
-                        .contentShape(Rectangle())
-                        .frame(maxWidth: .infinity)
+                        .font(.leadText())
                 }
-//                .buttonStyle(ButtonStylePrimaryColor1())
-                .frame(height: 50)
-                .background(Color.blue)
-                .cornerRadius(16)
-                
-                
+                .buttonStyle(ButtonStyleYellowColorWide())
                 
             }
             .padding()
