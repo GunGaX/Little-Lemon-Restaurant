@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-let kFirstName = "first name key"
-let kLastname = "second name key"
-let kEmail = "email key"
-
-let kIsloggedIn = "is logged in key"
-
 struct Onboarding: View {
     
     @State var isLoggedIn = false
@@ -47,6 +41,7 @@ struct Onboarding: View {
                         .padding(.bottom, 20)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
+                
             
                 Group {
                     TextField("First Name", text: $firstName)

@@ -12,6 +12,7 @@ struct Little_Lemon_RestaurantApp: App {
     var body: some Scene {
         WindowGroup {
             Onboarding()
+                .preferredColorScheme(.light)
         }
     }
 }

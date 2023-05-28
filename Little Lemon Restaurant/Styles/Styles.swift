@@ -119,7 +119,7 @@ extension Font {
     }
     
     static func paragraphText() -> Font {
-        return Font.custom("Karla", size: 14)
+        return Font.custom("Karla", size: 16)
     }
     
     static func highlightText() -> Font {
