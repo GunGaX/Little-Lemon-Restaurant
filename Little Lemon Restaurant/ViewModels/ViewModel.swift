@@ -20,4 +20,6 @@ class ViewModel: ObservableObject {
     @Published var lastName = UserDefaults.standard.string(forKey: kLastname) ?? ""
     @Published var email = UserDefaults.standard.string(forKey: kEmail) ?? ""
     
+    @Published var isLoggedIn = UserDefaults.standard.bool(forKey: kIsloggedIn)
+    
 }

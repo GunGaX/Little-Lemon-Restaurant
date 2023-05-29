@@ -12,35 +12,60 @@ struct Menu: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     
+    @State var dataLoaded = false
+    
     @State var startersIsEnabled = true
     @State var mainsIsEnabled = true
     @State var dessertsIsEnabled = true
     @State var drinksIsEnabled = true
+    @State var discountIsEnabled = true
     
     @State var searchText = ""
-    
-    @State var dataLoaded = false
-
+    @State var isKeyboardVisible = false
     
     var body: some View {
         NavigationView {
             VStack {
-                Group {
-                    Text("Little Lemon Restaurant")
-                        .font(.subTitleFont())
-                        .bold()
-                    HStack {
-                        
-                        Spacer()
-                        
-                        Text("Lviv")
-                            .bold()
-                            .padding(.vertical, 10.0)
-                            .padding(.trailing, 30.0)
-                        
+                
+                Header()
+                
+                VStack {
+                    if !isKeyboardVisible {
+                        withAnimation() {
+                            Hero()
+                                .frame(minHeight: 220)
+                        }
                     }
                     
-                    Text("We are family owned Mediterranean restaurant, focused on tradional recipes served with a modern twist.")
+                    TextField("Search menu", text: $searchText)
+                    
+                        .padding(.horizontal)
+                        .frame(height: 50)
+                        .background(.white)
+                        .cornerRadius(8)
+                }
+                    .padding()
+                    .background(Color.primaryColor1)
+                    .frame(maxWidth: .infinity)
+                
+                
+                Text("ORDER FOR DELIVERY!")
+                    .font(.sectionTitle())
+                    .foregroundColor(.highlightColor2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top)
+                    .padding(.leading)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        Toggle("Starters", isOn: $startersIsEnabled)
+                        Toggle("Mains", isOn: $mainsIsEnabled)
+                        Toggle("Desserts", isOn: $dessertsIsEnabled)
+                        Toggle("Drinks", isOn: $drinksIsEnabled)
+                        Toggle("Discounts", isOn: $discountIsEnabled)
+                    }
+                    .toggleStyle(MyToggleStyle())
+                    .padding(.horizontal)
                 }
                 
                 FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
@@ -63,6 +88,17 @@ struct Menu: View {
                 if !dataLoaded {
                     MenuList.getMenuData(context: viewContext)
                     dataLoaded = true
+                }
+            }
+            .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
+                        withAnimation {
+                            self.isKeyboardVisible = true
+                        }
+                        
+                    }
+            .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
+                withAnimation {
+                    self.isKeyboardVisible = false
                 }
             }
         }

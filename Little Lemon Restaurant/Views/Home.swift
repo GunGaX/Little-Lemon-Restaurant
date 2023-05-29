@@ -14,7 +14,9 @@ struct Home: View {
     var body: some View {
         TabView {
             Menu()
+                .navigationBarBackButtonHidden()
                 .environment(\.managedObjectContext, persistence.container.viewContext)
+                
                 .tabItem({
                 Label("Menu", systemImage: "list.dash")
                 })
@@ -25,7 +27,12 @@ struct Home: View {
                 })
                 
         }
-        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden()
+        .onAppear {
+            let tabBarAppearance = UITabBarAppearance()
+            tabBarAppearance.configureWithDefaultBackground()
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        }
     }
 }
 

@@ -73,8 +73,9 @@ struct MyToggleStyle: ToggleStyle {
                 configuration.label
             }
         }
+        .font(.sectionTitle())
         .foregroundColor(Color.primaryColor1)
-        .padding(5)
+        .padding(8)
         .background {
             if configuration.isOn {
                 Color.highlightColor1
@@ -99,11 +100,11 @@ extension Font {
     }
     
     static func subTitleFont() -> Font {
-        return Font.custom("Markazi Text", size: 28).weight(.medium)
+        return Font.custom("Markazi Text", size: 32).weight(.medium)
     }
     
     static func leadText() -> Font {
-        return Font.custom("Karla", size: 20).weight(.semibold)
+        return Font.custom("Karla", size: 18).weight(.medium)
     }
     
     static func regularText() -> Font {
