@@ -35,6 +35,7 @@
 		B6D951452A2384A400EF6B4C /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6D9513E2A2384A400EF6B4C /* Karla-Bold.ttf */; };
 		B6D951472A23A57F00EF6B4C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D951462A23A57F00EF6B4C /* ViewModel.swift */; };
 		B6D9514A2A23AF9100EF6B4C /* DishItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D951492A23AF9100EF6B4C /* DishItem.swift */; };
+		B6DC38EB2A2794F300073B9B /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC38EA2A2794F300073B9B /* ItemDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		B6D9513E2A2384A400EF6B4C /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
 		B6D951462A23A57F00EF6B4C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B6D951492A23AF9100EF6B4C /* DishItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishItem.swift; sourceTree = "<group>"; };
+		B6DC38EA2A2794F300073B9B /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				B681CFCC2A0E599900276C52 /* Onboarding.swift */,
 				B681CFCE2A0E662700276C52 /* Menu.swift */,
+				B6DC38EA2A2794F300073B9B /* ItemDetail.swift */,
 				B6D951492A23AF9100EF6B4C /* DishItem.swift */,
 				B681CFD22A0E7FF600276C52 /* UserProfile.swift */,
 				B681CFD02A0E67D000276C52 /* Home.swift */,
@@ -299,6 +302,7 @@
 				B60B45D52A17E91700FC0BFF /* MenuList.swift in Sources */,
 				B61251152A24F3DB00C98000 /* Header.swift in Sources */,
 				B60B45DF2A1A1D3800FC0BFF /* FetchedObjects.swift in Sources */,
+				B6DC38EB2A2794F300073B9B /* ItemDetail.swift in Sources */,
 				B6D951472A23A57F00EF6B4C /* ViewModel.swift in Sources */,
 				B681CFBF2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift in Sources */,
 			);

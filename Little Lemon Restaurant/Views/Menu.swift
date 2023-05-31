@@ -44,9 +44,9 @@ struct Menu: View {
                         .background(.white)
                         .cornerRadius(8)
                 }
-                    .padding()
-                    .background(Color.primaryColor1)
-                    .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.primaryColor1)
+                .frame(maxWidth: .infinity)
                 
                 
                 Text("ORDER FOR DELIVERY!")
@@ -71,7 +71,7 @@ struct Menu: View {
                 FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                     List(dishes) { dish in
                         ZStack {
-                            NavigationLink(destination: EmptyView()) {
+                            NavigationLink(destination: ItemDetail(dish: dish)) {
                                 EmptyView()
                             }
                             .opacity(0)
@@ -81,24 +81,24 @@ struct Menu: View {
                     }
                     .scrollIndicators(ScrollIndicatorVisibility.hidden)
                     .listStyle(.plain)
+                    
                 }
-            }
-            .onAppear() {
-                // Kick-off the data from url
-                if !dataLoaded {
-                    MenuList.getMenuData(context: viewContext)
-                    dataLoaded = true
-                }
-            }
-            .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
-                        withAnimation {
-                            self.isKeyboardVisible = true
-                        }
-                        
+                .onAppear() {
+                    if !dataLoaded {
+                        MenuList.getMenuData(context: viewContext)
+                        dataLoaded = true
                     }
-            .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
-                withAnimation {
-                    self.isKeyboardVisible = false
+                }
+                .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
+                    withAnimation {
+                        self.isKeyboardVisible = true
+                    }
+                    
+                }
+                .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
+                    withAnimation {
+                        self.isKeyboardVisible = false
+                    }
                 }
             }
         }

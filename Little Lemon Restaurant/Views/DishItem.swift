@@ -44,6 +44,8 @@ struct DishItem: View {
                 }
                 .frame(maxWidth: 90, maxHeight: 90)
                 .clipShape(Rectangle())
+                .cornerRadius(8)
+
             }
             .padding(.vertical)
             .frame(maxHeight: 150)
