@@ -38,7 +38,8 @@ struct Menu: View {
                     }
                     
                     TextField("Search menu", text: $searchText)
-                    
+                        .font(.paragraphText())
+                        .bold()
                         .padding(.horizontal)
                         .frame(height: 50)
                         .background(.white)

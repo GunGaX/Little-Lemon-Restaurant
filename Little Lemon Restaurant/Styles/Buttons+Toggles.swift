@@ -83,3 +83,26 @@ struct MyToggleStyle: ToggleStyle {
         .cornerRadius(8)
     }
 }
+
+struct CheckboxStyle: ToggleStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        return HStack {
+            Image(systemName: configuration.isOn ? "checkmark.square.fill" : "square")
+                .resizable()
+                .frame(width: 24, height: 24)
+                .foregroundColor(configuration.isOn ? .primaryColor1 : .gray)
+                .font(.system(size: 20, weight: .bold, design: .default))
+                .onTapGesture {
+                    configuration.isOn.toggle()
+                }
+                .padding(.trailing, 25)
+                        
+            configuration.label
+                .font(.leadText())
+                .foregroundColor(.black)
+            
+            Spacer()
+        }
+ 
+    }
+}

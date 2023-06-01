@@ -31,7 +31,7 @@ struct DishItem: View {
                     
                     Text("$" + ("\(dish.price)"))
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .font(.highlightText())
+                        .font(.sectionCategories())
                         .foregroundColor(.primaryColor1)
                         .monospaced()
                 }

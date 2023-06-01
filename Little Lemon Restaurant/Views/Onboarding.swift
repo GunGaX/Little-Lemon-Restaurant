@@ -58,7 +58,7 @@ struct Onboarding: View {
                 Button(action: {
                     if !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty {
                         UserDefaults.standard.set(firstName, forKey: kFirstName)
-                        UserDefaults.standard.set(lastName, forKey: kLastname)
+                        UserDefaults.standard.set(lastName, forKey: kLastName)
                         UserDefaults.standard.set(email, forKey: kEmail)
                         
                         UserDefaults.standard.set(true, forKey: kIsloggedIn)
