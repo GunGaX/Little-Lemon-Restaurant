@@ -39,6 +39,7 @@ struct ItemDetail: View {
                 Text("$" + "\(dish.price)")
                     .font(.subTitleFont())
                     .foregroundColor(.primaryColor1)
+                    .bold()
                     
             }
             .padding()

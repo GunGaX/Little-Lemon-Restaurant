@@ -22,4 +22,7 @@ class ViewModel: ObservableObject {
     
     @Published var isLoggedIn = UserDefaults.standard.bool(forKey: kIsloggedIn)
     
+    
+    // TODO: - Alerts 
+    
 }

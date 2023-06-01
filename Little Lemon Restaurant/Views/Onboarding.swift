@@ -50,11 +50,7 @@ struct Onboarding: View {
                         .textCase(.none)
                         .keyboardType(.emailAddress)
                 }
-                .font(.regularText())
-                .padding(.horizontal)
-                .frame(height: 50)
-                .background(Color.gray.opacity(0.1))
-                .cornerRadius(8)
+                .textFieldStyle(MainTextFieldStyle())
                 .padding(.bottom, 6)
                 
                 Spacer()
@@ -72,6 +68,7 @@ struct Onboarding: View {
                 }) {
                     Text("Register")
                         .font(.leadText())
+                        .bold()
                 }
                 .buttonStyle(ButtonStyleYellowColorWide())
                 

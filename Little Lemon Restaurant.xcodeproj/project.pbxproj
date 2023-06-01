@@ -12,7 +12,10 @@
 		B60B45DB2A1A1CAC00FC0BFF /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B60B45D92A1A1CAC00FC0BFF /* ExampleDatabase.xcdatamodeld */; };
 		B60B45DD2A1A1D0600FC0BFF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B45DC2A1A1D0600FC0BFF /* Persistence.swift */; };
 		B60B45DF2A1A1D3800FC0BFF /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B45DE2A1A1D3800FC0BFF /* FetchedObjects.swift */; };
-		B60B45E22A1CE9C300FC0BFF /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B45E12A1CE9C300FC0BFF /* Styles.swift */; };
+		B60B45E22A1CE9C300FC0BFF /* Buttons+Toggles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B45E12A1CE9C300FC0BFF /* Buttons+Toggles.swift */; };
+		B60CD71C2A2918F5006DBA71 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60CD71B2A2918F5006DBA71 /* Colors.swift */; };
+		B60CD71E2A291936006DBA71 /* Text+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60CD71D2A291936006DBA71 /* Text+Fonts.swift */; };
+		B60CD7202A292D9F006DBA71 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60CD71F2A292D9F006DBA71 /* TextFields.swift */; };
 		B61251152A24F3DB00C98000 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61251142A24F3DB00C98000 /* Header.swift */; };
 		B61251172A25096C00C98000 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61251162A25096C00C98000 /* Hero.swift */; };
 		B681CFBF2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B681CFBE2A0E594300276C52 /* Little_Lemon_RestaurantApp.swift */; };
@@ -44,7 +47,10 @@
 		B60B45DA2A1A1CAC00FC0BFF /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
 		B60B45DC2A1A1D0600FC0BFF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B60B45DE2A1A1D3800FC0BFF /* FetchedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
-		B60B45E12A1CE9C300FC0BFF /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		B60B45E12A1CE9C300FC0BFF /* Buttons+Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Buttons+Toggles.swift"; sourceTree = "<group>"; };
+		B60CD71B2A2918F5006DBA71 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B60CD71D2A291936006DBA71 /* Text+Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Fonts.swift"; sourceTree = "<group>"; };
+		B60CD71F2A292D9F006DBA71 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
 		B61251142A24F3DB00C98000 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		B61251162A25096C00C98000 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		B681CFBB2A0E594300276C52 /* Little Lemon Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemon Restaurant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,7 +166,10 @@
 		B6D951292A2270EC00EF6B4C /* Styles */ = {
 			isa = PBXGroup;
 			children = (
-				B60B45E12A1CE9C300FC0BFF /* Styles.swift */,
+				B60CD71B2A2918F5006DBA71 /* Colors.swift */,
+				B60CD71D2A291936006DBA71 /* Text+Fonts.swift */,
+				B60B45E12A1CE9C300FC0BFF /* Buttons+Toggles.swift */,
+				B60CD71F2A292D9F006DBA71 /* TextFields.swift */,
 				B6D9512F2A22B79800EF6B4C /* Fonts */,
 			);
 			path = Styles;
@@ -289,12 +298,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60B45E22A1CE9C300FC0BFF /* Styles.swift in Sources */,
+				B60B45E22A1CE9C300FC0BFF /* Buttons+Toggles.swift in Sources */,
 				B60B45DD2A1A1D0600FC0BFF /* Persistence.swift in Sources */,
 				B60B45D82A17E96800FC0BFF /* MenuItem.swift in Sources */,
+				B60CD71C2A2918F5006DBA71 /* Colors.swift in Sources */,
 				B681CFCF2A0E662700276C52 /* Menu.swift in Sources */,
 				B681CFCD2A0E599900276C52 /* Onboarding.swift in Sources */,
 				B61251172A25096C00C98000 /* Hero.swift in Sources */,
+				B60CD71E2A291936006DBA71 /* Text+Fonts.swift in Sources */,
+				B60CD7202A292D9F006DBA71 /* TextFields.swift in Sources */,
 				B681CFD32A0E7FF700276C52 /* UserProfile.swift in Sources */,
 				B6D9514A2A23AF9100EF6B4C /* DishItem.swift in Sources */,
 				B681CFD12A0E67D000276C52 /* Home.swift in Sources */,

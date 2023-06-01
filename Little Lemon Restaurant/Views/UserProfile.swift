@@ -9,9 +9,11 @@ import SwiftUI
 
 struct UserProfile: View {
     
-    let firstName = UserDefaults.standard.string(forKey: kFirstName)
-    let lastName = UserDefaults.standard.string(forKey: kLastname)
-    let email = UserDefaults.standard.string(forKey: kEmail)
+//    @StateObject private var viewModel = ViewModel()
+    
+    @State var firstName = ""
+    @State var lastName = ""
+    @State var email = ""
     
     @Environment(\.presentationMode) var presentation
     
@@ -22,10 +24,9 @@ struct UserProfile: View {
             
             VStack {
                 Text("Personal information")
-                    .font(.title2)
+                    .font(.subTitleFont())
                     .bold()
                 
-                Spacer()
                 
                 Image("profileImagePlaceholder")
                     .resizable()
@@ -38,64 +39,79 @@ struct UserProfile: View {
                 Spacer()
                 
                 Group {
-                    HStack {
-                        Text("First Name :")
-                            .font(.title3)
+                    VStack{
+                        Text("First name")
+                            .font(.sectionCategories())
+                            .foregroundColor(.primaryColor1)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        Spacer()
-                        
-                        Text(firstName ?? "No info")
-                            .font(.title2)
-                            .bold()
-                        
-                        
-                        Spacer()
+                        TextField("First Name", text: $firstName)
                     }
-                    HStack {
-                        Text("Last Name :")
-                            .font(.title3)
+                    
+                    VStack{
+                        Text("Last name")
+                            .font(.sectionCategories())
+                            .foregroundColor(.primaryColor1)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        Spacer()
-                        
-                        Text(lastName ?? "No info")
-                            .font(.title2)
-                            .bold()
-                        
-                        Spacer()
+                        TextField("Last Name", text: $lastName)
                     }
-                    HStack {
-                        Text("Email :          ")
-                            .font(.title3)
+                    
+                    VStack{
+                        Text("Email")
+                            .font(.sectionCategories())
+                            .foregroundColor(.primaryColor1)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        Spacer()
-                        
-                        Text(email ?? "No info")
-                            .font(.title2)
-                            .bold()
-                            .lineLimit(1)
-                        
-                        Spacer()
+                        TextField("Email", text: $email)
                     }
                 }
-                .padding(.vertical, 10)
+                .textFieldStyle(MainTextFieldStyle())
+                .disableAutocorrection(true)
                 
                 Spacer()
                 
-                Button(action: {
-                    UserDefaults.standard.set(false, forKey: kIsloggedIn)
+                HStack {
                     
-                    self.presentation.wrappedValue.dismiss()
+                    Button(action: {
+                        if !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty {
+                            UserDefaults.standard.set(firstName, forKey: kFirstName)
+                            UserDefaults.standard.set(lastName, forKey: kLastname)
+                            UserDefaults.standard.set(email, forKey: kEmail)
+                        }
+                    }) {
+                        Text("Save changes")
+                            .font(.paragraphText())
+                            .bold()
+                            .contentShape(Rectangle())
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(ButtonStylePrimaryColor1())
+                    
+                    Button(action: {
+                        
+                    }) {
+                        Text("Discard changes")
+                            .font(.paragraphText())
+                            .contentShape(Rectangle())
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(ButtonStylePrimaryColorReverse())
+                }
+                .padding(.bottom)
+                
+                
+                Button(action: {
+                    
                 }) {
                     Text("Logout")
-                        .foregroundColor(Color.white)
-                        .font(.title3)
+                        .font(.leadText())
                         .bold()
                         .contentShape(Rectangle())
                         .frame(maxWidth: .infinity)
                 }
-                .frame(height: 50)
-                .background(Color.red)
-                .cornerRadius(16)
+                .buttonStyle(ButtonStyleYellowColorWide())
+
             }
             .padding([.leading, .bottom, .trailing])
         }
